@@ -52,10 +52,13 @@ class TestSearchSettings:
         """
         page = BaiduPage(browser)
         page.open(base_url)
+        sleep(20)
         page.settings.click()
+        sleep(20)
         page.search_setting.click()
         sleep(2)
         page.save_setting.click()
+        sleep(20)
         alert_text = page.get_alert_text
         page.accept_alert()
         assert alert_text == "已经记录下您的使用偏好"
