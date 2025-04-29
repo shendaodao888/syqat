@@ -5,10 +5,7 @@ import sys
 from time import sleep
 import pytest
 from os.path import dirname, abspath
-from page.baidu_page import BaiduPage, LgPage
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-
+from page.baidu_page import LgPage
 sys.path.insert(0, dirname(dirname(abspath(__file__))))
 
 
