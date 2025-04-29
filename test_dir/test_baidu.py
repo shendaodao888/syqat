@@ -3,6 +3,7 @@
 @data: 2019-10-17
 @function python 基本用法
 """
+# -*- coding: utf-8 -*-
 import sys
 from time import sleep
 import pytest

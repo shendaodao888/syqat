@@ -3,11 +3,13 @@
 @data: 2019-10-17
 @function pytest 参数使用
 """
+# -*- coding: utf-8 -*-
 import sys
 import json
 from time import sleep
 import pytest
 from os.path import dirname, abspath
+
 
 base_path = dirname(dirname(abspath(__file__)))
 sys.path.insert(0, base_path)
