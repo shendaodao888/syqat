@@ -5,7 +5,7 @@ import sys
 from time import sleep
 import pytest
 from os.path import dirname, abspath
-from page.baidu_page import LgPage
+from page.lg_page import LgPage
 sys.path.insert(0, dirname(dirname(abspath(__file__))))
 
 
@@ -36,6 +36,6 @@ class TestLogin:
 
 
 #
-# if __name__ == '__main__':
-#     pytest.main(["-v", "-s", "test_login.py"])
+if __name__ == '__main__':
+    pytest.main(["-v", "-s", "test_login.py"])
 

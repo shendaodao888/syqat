@@ -149,4 +149,4 @@ def browser():
 
 
 if __name__ == "__main__":
-    capture_screenshots("test_dir/test_baidu_search.test_search_python.png")
+    capture_screenshots("test_dir/test_lg.png")
