@@ -28,6 +28,7 @@ class TestSearch:
         """
         page = BaiduPage(browser)
         page.open(base_url)
+        sleep(20)
         page.search_input = "pytest"
         page.search_button.click()
         sleep(2)
