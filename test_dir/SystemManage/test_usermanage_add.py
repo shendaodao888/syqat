@@ -28,12 +28,6 @@ class TestSys:
         * 检查页面标题是否包含关键字。
         """
         page = LgPage(driver)
-        page.open(base_url)
-        sleep(5)
-        page.login_account = "qianchuan"
-        page.login_pwd = "Qianchuan@123"
-        page.login_code = "1111"
-        page.login_login_button.click()
         page.sys_manage_menu.click()
         sleep(3)
         assert page.user_manage_left.text == "用户管理"
