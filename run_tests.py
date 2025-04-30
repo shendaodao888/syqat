@@ -31,7 +31,7 @@ def init_env(new_report):
 @click.option('-m', default=None, help='输入运行模式：run 或 debug.')
 def run(m):
     if m is None or m == "run":
-        logger.info("429又修改了它2--回归模式，开始执行✈✈！")
+        logger.info("--回归模式，开始执行✈✈！")
         now_time = time.strftime("%Y_%m_%d_%H_%M_%S")
         RunConfig.NEW_REPORT = os.path.join(REPORT_DIR, now_time)
         init_env(RunConfig.NEW_REPORT)

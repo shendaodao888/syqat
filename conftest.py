@@ -1,4 +1,6 @@
 import os
+from time import sleep
+
 import pytest
 from selenium import webdriver
 from selenium.webdriver import Remote
@@ -7,6 +9,8 @@ from selenium.webdriver.firefox.options import Options as FF_Options
 from config import RunConfig
 
 # 项目目录配置
+from page.lg_page import LgPage
+
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 REPORT_DIR = BASE_DIR + "/test_report/"
 
@@ -23,32 +27,32 @@ def pytest_html_results_table_row(report, cells):
     cells.pop()
 
 
-@pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item):
-    """
-    用于向测试用例中添加用例的开始时间、内部注释，和失败截图等.
-    :param item:
-    """
-    pytest_html = item.config.pluginmanager.getplugin('html')
-    outcome = yield
-    report = outcome.get_result()
-    report.description = description_html(item.function.__doc__)
-    extra = getattr(report, 'extra', [])
-    if report.when == 'call' or report.when == "setup":
-        xfail = hasattr(report, 'wasxfail')
-        if (report.skipped and xfail) or (report.failed and not xfail):
-            case_path = report.nodeid.replace("::", "_") + ".png"
-            if "[" in case_path:
-                case_name = case_path.split("-")[0] + "].png"
-            else:
-                case_name = case_path
-            capture_screenshots(case_name)
-            img_path = "image/" + case_name.split("/")[-1]
-            if img_path:
-                html = '<div><img src="%s" alt="screenshot" style="width:304px;height:228px;" ' \
-                       'onclick="window.open(this.src)" align="right"/></div>' % img_path
-                extra.append(pytest_html.extras.html(html))
-        report.extra = extra
+# @pytest.hookimpl(hookwrapper=True)
+# def pytest_runtest_makereport(item):
+#     """
+#     用于向测试用例中添加用例的开始时间、内部注释，和失败截图等.
+#     :param item:
+#     """
+#     pytest_html = item.config.pluginmanager.getplugin('html')
+#     outcome = yield
+#     report = outcome.get_result()
+#     report.description = description_html(item.function.__doc__)
+#     extra = getattr(report, 'extra', [])
+#     if report.when == 'call' or report.when == "setup":
+#         xfail = hasattr(report, 'wasxfail')
+#         if (report.skipped and xfail) or (report.failed and not xfail):
+#             case_path = report.nodeid.replace("::", "_") + ".png"
+#             if "[" in case_path:
+#                 case_name = case_path.split("-")[0] + "].png"
+#             else:
+#                 case_name = case_path
+#             capture_screenshots(case_name)
+#             img_path = "image/" + case_name.split("/")[-1]
+#             if img_path:
+#                 html = '<div><img src="%s" alt="screenshot" style="width:304px;height:228px;" ' \
+#                        'onclick="window.open(this.src)" align="right"/></div>' % img_path
+#                 extra.append(pytest_html.extras.html(html))
+#         report.extra = extra
 
 
 def description_html(desc):
@@ -101,7 +105,7 @@ def capture_screenshots(case_name):
 
 # 启动浏览器
 @pytest.fixture(scope='session', autouse=True)
-def browser():
+def driver():
     """
     全局定义浏览器驱动
     :return:
@@ -147,6 +151,16 @@ def browser():
 
     return driver
 
+# 登录
+# @pytest.fixture(scope="module")
+# def login_lg(self, browser, base_url, username, pwd, code):
+#     page = LgPage(browser)
+#     page.open(base_url)
+#     page.login_account = username
+#     page.login_pwd = pwd
+#     page.login_code = code
+#     page.login_login_button.click()
+#     yield driver
 
 if __name__ == "__main__":
     capture_screenshots("test_dir/test_lg.png")
