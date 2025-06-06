@@ -1,8 +1,18 @@
 from poium import Page, Element
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class LgPage(Page):
     login_account = Element(id_="login_userName", describe="用户名")
+    def waitse(self,text,timeout=5):
+        element = WebDriverWait(self.driver, timeout,ele).until(
+            EC.visibility_of_element_located((By.ID, ele))
+        )
+        element.send_keys(text)
+        return self
+
     login_pwd = Element(id_="login_password", describe="密码")
     login_code = Element(css = "#login_validateCode > span > input", describe="验证码")
     login_login_button = Element(css = "#login > button", describe="登录按钮")
