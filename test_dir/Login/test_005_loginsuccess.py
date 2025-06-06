@@ -6,12 +6,7 @@ from time import sleep
 import pytest
 from os.path import dirname, abspath
 from pubmethod import waits
-from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 from page.lg_page import LgPage
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 sys.path.insert(0, dirname(dirname(abspath(__file__))))
 
 

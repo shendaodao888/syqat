@@ -12,6 +12,12 @@ def waits(driver,type,element,text):
         myelement = WebDriverWait(driver, 5, 0.5).until(
             EC.visibility_of_element_located((By.ID, element))
         )
-        myelement.send_keys(text)
+        # myelement.send_keys(text)
+    elif type == 'CSS_SELECTOR':
+        myelement = WebDriverWait(driver, 5, 0.5).until(
+            EC.visibility_of_element_located((By.CSS_SELECTOR, element))
+        )
+    myelement.send_keys(text)
+
 
 
