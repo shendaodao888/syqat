@@ -1,2 +1,0 @@
-Type of login_error_message: <class 'poium.base_page.Element'>
-Type of .text: <class 'str'>

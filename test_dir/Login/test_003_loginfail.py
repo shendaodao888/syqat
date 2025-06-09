@@ -29,7 +29,7 @@ class TestLoginFail:
         page.open(base_url)
 
         # 显示等待提成了公共方法
-        waits.waits(driver, "ID", "login_userName", "qianchuan1")
+        waits.waits(driver, "ID", "login_userName").send_keys("qianchuan_error")
 
         page.login_pwd = "Qianchuan@1234"
         page.login_code = "1111"

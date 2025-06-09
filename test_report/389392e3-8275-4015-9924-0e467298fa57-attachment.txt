@@ -1,8 +1,0 @@
-[32m2025-06-09 15:45:14[0m logging.py [1m| MainThread | INFO | 🔍 Find element: id=login_password. 密码[0m
-[32m2025-06-09 15:45:15[0m logging.py [1m| MainThread | INFO | ✅ send_keys('12345').[0m
-[32m2025-06-09 15:45:15[0m logging.py [1m| MainThread | INFO | 🔍 Find element: css selector=#login_validateCode > span > input. 验证码[0m
-[32m2025-06-09 15:45:16[0m logging.py [1m| MainThread | INFO | ✅ send_keys('1111').[0m
-[32m2025-06-09 15:45:16[0m logging.py [1m| MainThread | INFO | 🔍 Find element: css selector=#login > button. 登录按钮[0m
-[32m2025-06-09 15:45:17[0m logging.py [1m| MainThread | INFO | ✅ click().[0m
-[32m2025-06-09 15:45:18[0m logging.py [1m| MainThread | INFO | 🔍 Find element: css selector=#login_userName_help > div. 请输入账号[0m
-[32m2025-06-09 15:45:19[0m logging.py [1m| MainThread | INFO | ✅ text: 请输入账号.[0m

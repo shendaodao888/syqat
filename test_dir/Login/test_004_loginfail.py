@@ -31,7 +31,7 @@ class TestLoginFail:
         page.open(base_url)
 
         # 显示等待提成了公共方法
-        waits.waits(driver, "ID", "login_userName", "")
+        waits.waits(driver, "ID", "login_userName").send_keys("")
         page.login_pwd = ""
         page.login_code = ""
         page.login_login_button.click()
@@ -57,7 +57,7 @@ class TestLoginFail:
         page.open(base_url)
 
         # 显示等待提成了公共方法
-        waits.waits(driver, "ID", "login_userName", "")
+        waits.waits(driver, "ID", "login_userName").send_keys("")
         page.login_pwd = "12345"
         page.login_code = "1111"
         page.login_login_button.click()
@@ -81,7 +81,7 @@ class TestLoginFail:
         page.open(base_url)
 
         # 显示等待提成了公共方法
-        waits.waits(driver, "ID", "login_userName", "qianchuan")
+        waits.waits(driver, "ID", "login_userName").send_keys("qianchuan")
         page.login_pwd = ""
         page.login_code = "1111"
         page.login_login_button.click()
@@ -105,7 +105,7 @@ class TestLoginFail:
         page.open(base_url)
 
         # 显示等待提成了公共方法
-        waits.waits(driver, "ID", "login_userName", "qianchuan")
+        waits.waits(driver, "ID", "login_userName").send_keys("qianchuan")
         page.login_pwd = "12345"
         page.login_code = ""
         page.login_login_button.click()

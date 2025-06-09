@@ -28,10 +28,8 @@ class TestLogin:
         """
         page = LgPage(driver)
         page.open(base_url)
-        # sleep(5)
-
         # 显示等待提成了公共方法
-        waits.waits(driver,"ID", "login_userName", "qianchuan")
+        waits.waits(driver, "ID", "login_userName").send_keys("qianchuan")
         page.login_pwd = "Qianchuan@123"
         page.login_code = "1111"
         page.login_login_button.click()

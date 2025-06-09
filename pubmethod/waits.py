@@ -5,18 +5,19 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
 
-def waits(driver,type,element,text):
+def waits(driver, type, element):
+    myelement = None
     # 显示等待
     if type == 'ID':
-        myelement = WebDriverWait(driver, 5, 0.5).until(
+        myelement = WebDriverWait(driver, 10, 0.5).until(
             EC.visibility_of_element_located((By.ID, element))
         )
-        # myelement.send_keys(text)
     elif type == 'CSS_SELECTOR':
-        myelement = WebDriverWait(driver, 5, 0.5).until(
+        myelement = WebDriverWait(driver, 10, 0.5).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, element))
         )
-    myelement.send_keys(text)
+
+    return myelement
 
 
 

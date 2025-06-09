@@ -29,7 +29,7 @@ class TestLoginFail:
         page.open(base_url)
 
         # 显示等待提成了公共方法
-        waits.waits(driver, "ID", "login_userName", "qianchuan1")
+        waits.waits(driver, "ID", "login_userName").send_keys("qianchuan_error")
         # 显示等待
         # myelement = WebDriverWait(driver,5,0.5).until(
         #     EC.visibility_of_element_located((By.ID,"login_userName"))
@@ -40,7 +40,7 @@ class TestLoginFail:
         # driver.implicitly_wait(10)
 
         # 因为显示等待和PO的冲突 第一个元素就不使用PO模式了
-        # page.login_account = "qianchuan1"
+        # page.login_account = "qianchuan"
         page.login_pwd = "Qianchuan@123"
         page.login_code = "1111"
         page.login_login_button.click()
