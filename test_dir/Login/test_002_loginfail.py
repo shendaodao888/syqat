@@ -1,18 +1,20 @@
 # 2025/6/6 17:08
 # -*- coding:UTF-8 -*-
-import sys
+import sys, allure
 from os.path import dirname, abspath
 from time import sleep
 
 from pubmethod import waits
 from page.lg_page import LgPage
 
-sys.path.insert(0, dirname(dirname(abspath(__file__))))
 
-
+@allure.suite('登录')
+@allure.feature('登录失败')
 class TestLoginFail:
     """登录"""
 
+    @allure.title('测试错误账号、正确密码情况下的登录')
+    @allure.description('登录失败：测试错误账号、正确密码登录')
     def test_login_fail_case(self, driver, base_url):
         """
         名称：使用正确账密登录

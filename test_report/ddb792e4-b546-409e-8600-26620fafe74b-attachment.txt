@@ -1,0 +1,10 @@
+[32m2025-06-09 15:47:01[0m logging.py [1m| MainThread | INFO | 🔍 Find element: id=login_password. 密码[0m
+[32m2025-06-09 15:47:02[0m logging.py [1m| MainThread | INFO | ✅ send_keys('Qianchuan@12345').[0m
+[32m2025-06-09 15:47:02[0m logging.py [1m| MainThread | INFO | 🔍 Find element: css selector=#login_validateCode > span > input. 验证码[0m
+[32m2025-06-09 15:47:03[0m logging.py [1m| MainThread | INFO | ✅ send_keys('1111').[0m
+[32m2025-06-09 15:47:03[0m logging.py [1m| MainThread | INFO | 🔍 Find element: css selector=#login > button. 登录按钮[0m
+[32m2025-06-09 15:47:04[0m logging.py [1m| MainThread | INFO | ✅ click().[0m
+[32m2025-06-09 15:47:05[0m logging.py [1m| MainThread | INFO | 🔍 Find element: css selector=body > div.ant-message.ant-message-top.css-5wsri9 > div > div > div > div > span:nth-child(2). 账号密码错误[0m
+[32m2025-06-09 15:47:06[0m logging.py [1m| MainThread | INFO | ✅ text: 账号或密码不正确.[0m
+[32m2025-06-09 15:47:06[0m logging.py [1m| MainThread | INFO | 🔍 Find element: css selector=body > div.ant-message.ant-message-top.css-5wsri9 > div > div > div > div > span:nth-child(2). 账号密码错误[0m
+[32m2025-06-09 15:47:07[0m logging.py [1m| MainThread | INFO | ✅ text: 账号或密码不正确.[0m

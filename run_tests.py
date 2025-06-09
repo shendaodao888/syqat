@@ -35,14 +35,17 @@ def run(m):
         now_time = time.strftime("%Y_%m_%d_%H_%M_%S")
         RunConfig.NEW_REPORT = os.path.join(REPORT_DIR, now_time)
         init_env(RunConfig.NEW_REPORT)
-        html_report = os.path.join(RunConfig.NEW_REPORT, "report.html")
-        xml_report = os.path.join(RunConfig.NEW_REPORT, "junit-xml.xml")
+        allure_report_dir = RunConfig.NEW_REPORT
+        # html_report = os.path.join(RunConfig.NEW_REPORT, "report.html")
+        # xml_report = os.path.join(RunConfig.NEW_REPORT, "junit-xml.xml")
         pytest.main(["-s", "-v", RunConfig.cases_path,
-                     "--html=" + html_report,
-                     "--junit-xml=" + xml_report,
-                     "--self-contained-html",
-                     "--maxfail", RunConfig.max_fail,
-                     "--reruns", RunConfig.rerun])
+                     "--alluredir=" + allure_report_dir
+                     # "--html=" + html_report,
+                     # "--junit-xml=" + xml_report,
+                     # "--self-contained-html",
+                     # "--maxfail", RunConfig.max_fail,
+                     # "--reruns", RunConfig.rerun
+                     ])
         logger.info("运行结束，生成测试报告♥❤！")
     elif m == "debug":
         print("debug模式，开始执行！")

@@ -2,17 +2,19 @@
 # -*- coding:UTF-8 -*-
 
 import sys
+import allure
 from os.path import dirname, abspath
 from time import sleep
-
 from pubmethod import waits
 from page.lg_page import LgPage
-sys.path.insert(0, dirname(dirname(abspath(__file__))))
 
 
+@allure.suite('登录')
+@allure.feature('登录失败')
 class TestLoginFail:
     """登录"""
-
+    @allure.title('测试正确账号、错误密码情况下的登录')
+    @allure.description('登录失败：测试正确账号、错误密码登录')
     def test_login_fail_case(self, driver, base_url):
         """
         名称：使用正确账密登录
@@ -28,7 +30,7 @@ class TestLoginFail:
 
         # 显示等待提成了公共方法
         waits.waits(driver, "ID", "login_userName", "qianchuan")
-        #显示等待
+        # 显示等待
         # myelement = WebDriverWait(driver,5,0.5).until(
         #     EC.visibility_of_element_located((By.ID,"login_userName"))
         # )
@@ -42,7 +44,6 @@ class TestLoginFail:
         page.login_pwd = "Qianchuan@12345"
         page.login_code = "1111"
         page.login_login_button.click()
-
         sleep(0.5)
-        assert page.login_error_message.text == "账号或密码不正确"
+        assert page.login_error_message.text == "账号或密码1不正确"
 

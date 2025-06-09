@@ -1,0 +1,6 @@
+[32m2025-06-09 15:36:35[0m logging.py [1m| MainThread | INFO | 🔍 Find element: id=login_password. 密码[0m
+[32m2025-06-09 15:36:36[0m logging.py [1m| MainThread | INFO | ✅ send_keys('Qianchuan@123').[0m
+[32m2025-06-09 15:36:36[0m logging.py [1m| MainThread | INFO | 🔍 Find element: css selector=#login_validateCode > span > input. 验证码[0m
+[32m2025-06-09 15:36:37[0m logging.py [1m| MainThread | INFO | ✅ send_keys('1111').[0m
+[32m2025-06-09 15:36:37[0m logging.py [1m| MainThread | INFO | 🔍 Find element: css selector=#login > button. 登录按钮[0m
+[32m2025-06-09 15:36:38[0m logging.py [1m| MainThread | INFO | ✅ click().[0m
