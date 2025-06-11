@@ -54,10 +54,26 @@ class LgPage(Page):
     user_manage_add_name = Element(id_="user_userName", describe="用户姓名")
     user_manage_add_phone = Element(id_="user_phoneNumber", describe="手机号")
     user_manage_add_department = Element(id_="user_departmentId", describe="归属组织")
+    user_manage_add_department_select = Element(css="body > div:nth-child(4) > div > div > div > div > div.ant-select-tree-list > div > div > div > div:nth-child(1) > span.ant-select-tree-node-content-wrapper.ant-select-tree-node-content-wrapper-open > span", describe="输入组织名称后显示的窗口")
     user_manage_add_pwd = Element(id_="user_password", describe="登录密码")
-    # user_manage_add_role = Element(id_="user_userName", describe="角色")
-    # user_manage_add_status = Element(id_="user_userName", describe="用户状态")
+    user_manage_add_role = Element(id_="user_roleIds", describe="角色")
+    user_manage_add_role_select = Element(css="body > div:nth-child(5) > div > div > div.rc-virtual-list > div > div > div > div > div", describe="角色选择框")
+    user_manage_add_status = Element(css="#user_status > label:nth-child(1) > span.ant-radio.ant-wave-target > input", describe="用户状态")
     user_manage_add_save = Element(css="#user > div.ant-form-item.submitBtnBox___Du8zi.css-n81ky1 > div > div > div > div > button.ant-btn.css-n81ky1.ant-btn-primary.ant-btn-color-primary.ant-btn-variant-solid > span", describe="保存")
     user_manage_add_cancel = Element(css="#user > div.ant-form-item.submitBtnBox___Du8zi.css-n81ky1 > div > div > div > div > button.ant-btn.css-n81ky1.ant-btn-default.ant-btn-color-default.ant-btn-variant-outlined.mr8___Q9BHE > span", describe="取消")
+    user_manage_add_success_message = Element(css="body > div.ant-message.ant-message-top.css-5wsri9 > div > div > div > div > span:nth-child(2)", describe="新增成功")
+    user_manage_search_name = Element(css="#scrollableDiv > div > div.content___wOMmp > div.homeBox___HdiWB > div.actionBox___ienmf > div.actionRight___GGPNw > span > input", describe="用户姓名搜索")
+    user_manage_searched_name =Element(css="#scrollableDiv > div > div.content___wOMmp > div.homeBox___HdiWB > div.ant-table-wrapper.tableContainer___oW4hG.css-n81ky1 > div > div > div > div > div > table > tbody > tr.ant-table-row.ant-table-row-level-0 > td:nth-child(2)", describe="搜索结果")
+    user_manage_searched_nums = Element(css="#scrollableDiv > div > div.content___wOMmp > div.homeBox___HdiWB > div.ant-table-wrapper.tableContainer___oW4hG.css-n81ky1 > div > div > ul > li.ant-pagination-total-text", describe="搜索结果条数")
+
+
+
+
+
+
+
+
+
+
 
 
