@@ -12,9 +12,17 @@ def waits(driver, type, element):
         myelement = WebDriverWait(driver, 10, 0.5).until(
             EC.visibility_of_element_located((By.ID, element))
         )
-    elif type == 'CSS_SELECTOR':
+    elif type == 'css':
         myelement = WebDriverWait(driver, 10, 0.5).until(
             EC.visibility_of_element_located((By.CSS_SELECTOR, element))
+        )
+    elif type == 'class':
+        myelement = WebDriverWait(driver, 10, 0.5).until(
+            EC.visibility_of_element_located((By.CLASS_NAME, element))
+        )
+    elif type == 'xpath':
+        myelement = WebDriverWait(driver, 10, 0.5).until(
+            EC.visibility_of_element_located((By.XPATH, element))
         )
 
     return myelement

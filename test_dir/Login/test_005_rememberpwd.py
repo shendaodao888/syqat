@@ -2,10 +2,8 @@
 # -*- coding:UTF-8 -*-
 
 import sys, allure
-from os.path import dirname, abspath
 from time import sleep
 from selenium.webdriver import ActionChains
-from selenium.webdriver.common.by import By
 
 from pubmethod import waits
 from page.lg_page import LgPage
@@ -13,12 +11,12 @@ from page.lg_page import LgPage
 
 @allure.suite('登录')
 @allure.feature('记住密码')
-class TestLoginFail:
+class TestRememberPWD:
     """登录"""
 
     @allure.title('测试登录时记住密码')
     @allure.description('测试勾选记住密码登录登出后密码仍未清除')
-    def test_login_remember_pwd_case(self, driver, base_url):
+    def test_remember_pwd_case(self, driver, base_url):
         page = LgPage(driver)
         page.open(base_url)
 

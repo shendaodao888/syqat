@@ -12,11 +12,11 @@ sys.path.insert(0, dirname(dirname(abspath(__file__))))
 
 @allure.suite('登录')
 @allure.feature('登录成功')
-class TestLogin:
+class TestLoginSuccess:
     """登录"""
     @allure.title('测试正确账号密码验证码的登录')
     @allure.description('登录成功：测试正确账号密码验证码登录')
-    def test_login_success_case(self, driver, base_url):
+    def test_login_success(self, driver, base_url):
         """
         名称：使用正确账密登录
         步骤：

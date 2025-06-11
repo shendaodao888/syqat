@@ -4,7 +4,6 @@
 import sys, allure
 from os.path import dirname, abspath
 from time import sleep
-
 from pubmethod import waits
 from page.lg_page import LgPage
 
