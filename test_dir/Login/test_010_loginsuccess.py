@@ -1,6 +1,5 @@
 # 2025/4/29 13:43
 # -*- coding:UTF-8 -*-
-import os
 import sys, allure
 from time import sleep
 import pytest

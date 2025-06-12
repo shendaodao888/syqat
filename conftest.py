@@ -10,6 +10,7 @@ from config import RunConfig
 
 # 项目目录配置
 from page.lg_page import LgPage
+from pubmethod import waits
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 REPORT_DIR = BASE_DIR + "/test_report/"
@@ -60,6 +61,24 @@ def driver():
     driver.quit()
 
     return driver
+
+
+# 登录
+# autouse默认就是false，这里还写出来，是为了强调下最好使用false
+@pytest.fixture(scope="class", autouse=False)
+def login_setup(driver, base_url):
+    """登录操作， 供多个测试类复用"""
+    page = LgPage(driver)
+    page.open(base_url)
+    # 显示等待提成了公共方法
+    waits.waits(driver, "ID", "login_userName").send_keys("qianchuan")
+    page.login_pwd = "Qianchuan@123"
+    page.login_code = "1111"
+    page.login_login_button.click()
+    # 测试结束后可清理，为了避免每次都要登录，这里暂时注释掉
+    yield
+    # page.logout.click()
+
 
 # 设置用例描述表头
 # def pytest_html_results_table_header(cells):
