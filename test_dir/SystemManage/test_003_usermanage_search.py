@@ -13,7 +13,7 @@ class TestSys:
     @allure.title('测试用户姓名搜索')
     @allure.description('测试用户姓名搜索')
     @pytest.mark.parametrize("keyword, expect_result", [
-        ("自动化测试", "自动化测试"),
+        ("自动化测试-改", "自动化测试-改"),
         ("qianchuan", "qianchuan")
     ])
     def test_sys(self, driver, base_url, keyword, expect_result):

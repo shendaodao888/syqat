@@ -17,6 +17,7 @@ class TestSys:
         page = LgPage(driver)
 
         # page.open(base_url)
+        driver.refresh()
         # 进入系统管理模块
         page.sys_manage_menu.click()
         assert page.user_manage_left.text == "用户管理"

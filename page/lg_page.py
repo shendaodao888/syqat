@@ -65,15 +65,12 @@ class LgPage(Page):
     user_manage_search_name = Element(css="#scrollableDiv > div > div.content___wOMmp > div.homeBox___HdiWB > div.actionBox___ienmf > div.actionRight___GGPNw > span > input", describe="用户姓名搜索")
     user_manage_searched_name =Element(css="#scrollableDiv > div > div.content___wOMmp > div.homeBox___HdiWB > div.ant-table-wrapper.tableContainer___oW4hG.css-n81ky1 > div > div > div > div > div > table > tbody > tr.ant-table-row.ant-table-row-level-0 > td:nth-child(2)", describe="搜索结果")
     user_manage_searched_nums = Element(css="#scrollableDiv > div > div.content___wOMmp > div.homeBox___HdiWB > div.ant-table-wrapper.tableContainer___oW4hG.css-n81ky1 > div > div > ul > li.ant-pagination-total-text", describe="搜索结果条数")
-
-
-
-
-
-
-
-
-
+    user_manage_update_icon = Element(css="#scrollableDiv > div > div.content___wOMmp > div.homeBox___HdiWB > div.ant-table-wrapper.tableContainer___oW4hG.css-n81ky1 > div > div > div > div > div > table > tbody > tr.ant-table-row.ant-table-row-level-0 > td:nth-child(11) > div > button:nth-child(1) > span:nth-child(2)", describe="修改按钮")
+    user_manage_user_div = Element(css="#scrollableDiv > div > div.content___wOMmp > div.homeBox___HdiWB > div.ant-table-wrapper.tableContainer___oW4hG.css-n81ky1 > div > div > div > div > div", describe="用户数据div")
+    user_manage_update_success = Element(css="body > div.ant-message.ant-message-top.css-5wsri9 > div > div > div > div > span:nth-child(2)", describe="修改成功")
+    user_manage_update_options = Elements(css="#scrollableDiv > div > div.content___wOMmp > div.homeBox___HdiWB > div.ant-table-wrapper.tableContainer___oW4hG.css-n81ky1 > div > div > div > div > div > table > tbody > tr:nth-child(2) > td:nth-child(11) > div > button", describe="操作按钮：修改删除重置密码")
+    user_manage_update_confirm = Element(css="body > div:nth-child(3) > div > div.ant-modal-wrap.ant-modal-centered > div > div:nth-child(1) > div > div.ant-modal-footer > button.ant-btn.css-n81ky1.ant-btn-primary.ant-btn-color-primary.ant-btn-variant-solid > span", describe="确定按钮")
+    user_manage_update_delete_message = Element(css="body > div.ant-message.ant-message-top.css-5wsri9 > div > div > div > div > span:nth-child(2)", describe="删除成功")
 
 
 
