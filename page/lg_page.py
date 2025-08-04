@@ -71,6 +71,7 @@ class LgPage(Page):
     user_manage_update_options = Elements(css="#scrollableDiv > div > div.content___wOMmp > div.homeBox___HdiWB > div.ant-table-wrapper.tableContainer___oW4hG.css-n81ky1 > div > div > div > div > div > table > tbody > tr:nth-child(2) > td:nth-child(11) > div > button", describe="操作按钮：修改删除重置密码")
     user_manage_update_confirm = Element(css="body > div:nth-child(3) > div > div.ant-modal-wrap.ant-modal-centered > div > div:nth-child(1) > div > div.ant-modal-footer > button.ant-btn.css-n81ky1.ant-btn-primary.ant-btn-color-primary.ant-btn-variant-solid > span", describe="确定按钮")
     user_manage_update_delete_message = Element(css="body > div.ant-message.ant-message-top.css-5wsri9 > div > div > div > div > span:nth-child(2)", describe="删除成功")
-
-
-
+    user_manage_org_search = Element(css="#scrollableDiv > div > div.content___wOMmp > div.resizableBox___AKxfR.react-resizable > div > span > input", describe="组织名称查询")
+    user_manage_org_search_result = Element(css='#scrollableDiv > div > div.content___wOMmp > div.resizableBox___AKxfR.react-resizable > div > div > div > div.ant-tree-list > div > div > div > div:nth-child(1) > span.ant-tree-node-content-wrapper.ant-tree-node-content-wrapper-open > span > span', describe="查询到的结果")
+    user_manage_org_search_user_result = Elements(css="#scrollableDiv > div > div.content___wOMmp > div.homeBox___HdiWB > div.ant-table-wrapper.tableContainer___oW4hG.css-n81ky1 > div > div > div > div > div > table > tbody > tr.ant-table-row.ant-table-row-level-0 > td",describe='通过组织查询到的组织下用户所在组织')
+    user_manage_org_search_user_result_nums = Element(css='#scrollableDiv > div > div.content___wOMmp > div.homeBox___HdiWB > div.ant-table-wrapper.tableContainer___oW4hG.css-n81ky1 > div > div > ul > li.ant-pagination-total-text', describe="查询结果条数")
